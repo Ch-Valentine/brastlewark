@@ -1,6 +1,6 @@
 const convertGnomes = json => json.Brastlewark.reduce((acc, gnome) => {
   const firstname = gnome.name.split(' ')[0];
-  const gnomeGender = firstname.endsWith('a') ? 'female' : 'male';
+  const gnomeGender = firstname.endsWith('a') ? 'Female' : 'Male';
 
   const gnomeById = {
     ...acc.gnomeById,

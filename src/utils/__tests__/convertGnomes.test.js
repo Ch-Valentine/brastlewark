@@ -30,7 +30,9 @@ describe('convertGnomes util', () => {
         ],
         "friends": [
           "Fizkin Voidbuster"
-        ]
+        ],
+        "gender": "male",
+        "searchable": "tobus quickwhistle 306 pink male metalworker tailor"
       },
       1: {
         "id":1,
@@ -44,7 +46,9 @@ describe('convertGnomes util', () => {
           "Mason",
           "Tailor"
         ],
-        "friends":[]
+        "friends":[],
+        "gender": "male",
+        "searchable": "fizkin voidbuster 288 green male mason tailor"
       }
     });
   });

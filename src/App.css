@@ -1,10 +1,7 @@
-@font-face {
-    font-family: lineage;
-    src: url(/lineage.ttf);
-}
-
 body {
-    font-family: lineage, Arial, sans-serif;
+    font-family: 'Cormorant Infant', serif;
+    font-size: 20px;
+
+    color: #444;
     background: #fff;
-    letter-spacing: 2px;
 }
