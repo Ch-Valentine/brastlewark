@@ -5,13 +5,12 @@ const testedResult = convertGnomes(testData);
 
 describe('convertGnomes util', () => {
   it('should return object that has three keys', () => {
-    expect(Object.keys(testedResult)).toHaveLength(3);
+    expect(Object.keys(testedResult)).toHaveLength(2);
   });
 
   it('should return object that has all needed properties', () => {
     expect(testedResult).toHaveProperty('gnomeById');
     expect(testedResult).toHaveProperty('gnomeIdByName');
-    expect(testedResult).toHaveProperty('gnomeIdsByProfession');
   });
 
   it('gnomeById should be a correct value', () => {
@@ -31,7 +30,7 @@ describe('convertGnomes util', () => {
         "friends": [
           "Fizkin Voidbuster"
         ],
-        "gender": "male",
+        "gender": "Male",
         "searchable": "tobus quickwhistle 306 pink male metalworker tailor"
       },
       1: {
@@ -47,7 +46,7 @@ describe('convertGnomes util', () => {
           "Tailor"
         ],
         "friends":[],
-        "gender": "male",
+        "gender": "Male",
         "searchable": "fizkin voidbuster 288 green male mason tailor"
       }
     });
@@ -57,14 +56,6 @@ describe('convertGnomes util', () => {
     expect(testedResult.gnomeIdByName).toEqual({
       "Tobus Quickwhistle": 0,
       "Fizkin Voidbuster": 1,
-    });
-  });
-
-  it('gnomeIdsByProfession should be a correct value', () => {
-    expect(testedResult.gnomeIdsByProfession).toEqual({
-      "Metalworker": [0],
-      "Tailor": [0, 1],
-      "Mason": [1]
     });
   });
 });

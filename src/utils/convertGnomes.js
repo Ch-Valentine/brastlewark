@@ -12,13 +12,8 @@ const convertGnomes = json => json.Brastlewark.reduce((acc, gnome) => {
     }
   };
   const gnomeIdByName = { ...acc.gnomeIdByName, [gnome.name]: gnome.id };
-  const gnomeIdsByProfession = { ...acc.gnomeIdsByProfession };
 
-  gnome.professions.forEach(profName => {
-    gnomeIdsByProfession[profName] = [...gnomeIdsByProfession[profName] || [], gnome.id]
-  });
-
-  return { gnomeById, gnomeIdByName, gnomeIdsByProfession }
-}, { gnomeById: {}, gnomeIdByName: {}, gnomeIdsByProfession: {} });
+  return { gnomeById, gnomeIdByName }
+}, { gnomeById: {}, gnomeIdByName: {} });
 
 export default convertGnomes;
