@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Suspense, lazy } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import PagePreview from "./components/page-preview";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const ListOfGnomes = lazy(() => import('./modules/list-of-gnomes'));
+const GnomesDetails = lazy(() => import('./modules/gnome-details'));
+
+const App = () => (
+  <Router className="App">
+    <Suspense fallback={<PagePreview/>}>
+      <Switch>
+        <Route exact path="/" component={ListOfGnomes}/>
+        <Route exact path="/gnomes/:id" component={GnomesDetails}/>
+      </Switch>
+    </Suspense>
+  </Router>
+);
 
 export default App;

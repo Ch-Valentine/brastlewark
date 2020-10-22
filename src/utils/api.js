@@ -3,10 +3,16 @@ import convertGnomes from './convertGnomes';
 
 export default {
   getGnomes: async () => {
-    const list = await fetch(
+    const response = await fetch(
       'https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json'
     );
 
-    return convertGnomes(list);
+    if (!response.ok) {
+      throw new Error('Something with network');
+    }
+
+    const json = await response.json();
+
+    return convertGnomes(json);
   }
 }
