@@ -45,9 +45,9 @@ const ListOfGnomes = () => {
       )}
     >
       <div className="list">
-        {gnomesToDisplay.map(gnome => (
+        {gnomesToDisplay.length ? gnomesToDisplay.map(gnome => (
           <ListItem key={gnome.id} {...gnome} />
-        ))}
+        )) : <h3>No result by the search</h3>}
       </div>
 
       {matchCount > gnomesPerPageCount ? (

@@ -29,13 +29,13 @@ export const useData = () => {
 export const useQueryState = (keyName, initValue) => {
   const history = useHistory();
 
-  const queryParams = new URLSearchParams(window.location.search);
+  const queryParams = new URLSearchParams(history.location.search);
   const initQueryValue = queryParams.get(keyName);
 
   const [value, setValue] = useState(initQueryValue || initValue);
 
   const onValueChange = useCallback((newValue) => {
-    const { search, pathname } = window.location;
+    const { search, pathname } = history.location;
 
     const newQuery = updateQueryStringParameter(`${pathname}${search}`, keyName, newValue);
 
