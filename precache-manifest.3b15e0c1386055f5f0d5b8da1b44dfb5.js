@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9010e565184c65e026d362e1cc143c1e",
+    "revision": "d5b1965b6110daec13e2a2194866a912",
     "url": "/brastlewark/index.html"
   },
   {
@@ -12,7 +12,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/brastlewark/static/css/5.72504c49.chunk.css"
   },
   {
-    "revision": "c5df3b08510cf0d3ac83",
+    "revision": "2074baa724a882c482bb",
     "url": "/brastlewark/static/css/main.d688419f.chunk.css"
   },
   {
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/brastlewark/static/js/5.9cd94ab2.chunk.js"
   },
   {
-    "revision": "c5df3b08510cf0d3ac83",
-    "url": "/brastlewark/static/js/main.42d2a9ee.chunk.js"
+    "revision": "2074baa724a882c482bb",
+    "url": "/brastlewark/static/js/main.1e10dbf9.chunk.js"
   },
   {
     "revision": "0dba8a797f7a9e06534e",
