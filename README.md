@@ -8,4 +8,4 @@ For the application I use only `react`, `react-dom` and `react-router-dom` libra
 ## How to run tests
 * `$ yarn test`
 
-NOTE: I tested only one file: `src/utils/__tests__/convertGnomes.test.js` 
+NOTE: I tested only one file for the test demo: `src/utils/__tests__/convertGnomes.test.js` 
