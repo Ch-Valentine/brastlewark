@@ -7,7 +7,7 @@ const ListOfGnomes = lazy(() => import('./modules/list-of-gnomes'));
 const GnomesDetails = lazy(() => import('./modules/gnome-details'));
 
 const App = () => (
-  <Router className="App">
+  <Router className="App" basename={process.env.PUBLIC_URL}>
     <Suspense fallback={<PagePreview/>}>
       <Switch>
         <Route exact path="/" component={ListOfGnomes}/>
